@@ -1,5 +1,7 @@
 name: Playwright Tests
 on:
+  schedule:
+    - cron: '0 9 * * 1' #To run Monday by 9AM UTC
   push:
     branches: [ main, master ]
   pull_request:

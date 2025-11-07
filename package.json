@@ -1,0 +1,18 @@
+{
+  "name": "thelifedao-uat-playwright",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "npx playwright test",
+    "test:headed": "npx playwright test --headed",
+    "test:report": "npx playwright show-report",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "@types/node": "^24.10.0",
+    "dotenv": "^16.0.0",
+    "prettier": "^2.8.0",
+    "uuid": "^9.0.0"
+  }
+}

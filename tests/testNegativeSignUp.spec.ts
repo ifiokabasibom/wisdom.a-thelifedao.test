@@ -31,7 +31,9 @@ test.describe('Sign-Up Tests', () => {
 
         await page.getByRole('button', { name: 'Join via Invite' }).click();
         await page.getByRole('textbox', { name: 'Invite code/link' }).click();
+
         //Use a Coupon that is NOT $25 and Active to fill the input field
+        
         await page.getByRole('textbox', { name: 'Invite code/link' }).fill('VgkEVp');
         await page.getByRole('button', { name: 'Submit' }).click();
         const errorMessage = page.getByText('Invite code is invalid');

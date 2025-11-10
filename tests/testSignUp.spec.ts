@@ -36,6 +36,20 @@ test.describe('Sign-Up Tests', () => {
   fs.writeFileSync(couponFilePath, JSON.stringify({ codes: data.codes }, null, 2), 'utf-8');
   console.log('Using coupon:', validCoupon);
 
+  //|=========================NOTE TO ASSESSMENT REVIEWER=========================|
+  //Coupon codes that are guaranteed to work, incase the ones in the JSON file get exhausted in testing
+  // Define the (backup) array type — an array of strings
+    // const backupCouponCodes: string[] = [
+    //     "2JKfKt",
+    //     "wGVRC7",
+    //     "jakZcp",
+    //     "PynEe8",
+    //     "VgkEVp"
+    // ];
+
+    // // Pop the last coupon code and store it in a variable
+    // const backupValidCoupon: string | undefined = backupCouponCodes.pop();
+
   test('Happy Path Signup Flow', async ({ page }) => {
         // Navigate to landing page
         await page.goto('https://uat.thelifedao.io/en', { waitUntil: 'domcontentloaded' });

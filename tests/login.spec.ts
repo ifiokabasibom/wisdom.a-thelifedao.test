@@ -19,11 +19,12 @@ test.describe('Login tests', () => {
     await page.getByRole('textbox', { name: 'Enter your password' }).click();
     await page.getByRole('textbox', { name: 'Enter your password' }).fill(password);
 
-    //To Check 'Remember Me' 
+    //To Check 'Remember Me', uncomment the line below
     //await page.getByRole('img').nth(4).click();
+
     await page.locator('form').getByRole('button', { name: 'Log In' }).click();
 
-    const confirmationText = page.getByText('Activate Your Membership');
+    const confirmationText = page.getByText('Dashboard');
     await expect(confirmationText).toBeVisible();
 
   });
@@ -40,8 +41,9 @@ test.describe('Login tests', () => {
     await page.getByRole('textbox', { name: 'Enter your password' }).click();
     await page.getByRole('textbox', { name: 'Enter your password' }).fill(wrongPassword);
     
-    //To Check 'Remember Me' 
+    //To Check 'Remember Me', uncomment the line below 
     //await page.getByRole('img').nth(4).click();
+
     await page.locator('form').getByRole('button', { name: 'Log In' }).click();
 
     const invalidUserText = page.getByText('Invalid email or password');

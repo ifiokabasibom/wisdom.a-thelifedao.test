@@ -24,7 +24,11 @@ test.describe('Login tests', () => {
 
     await page.locator('form').getByRole('button', { name: 'Log In' }).click();
 
+    //When the logged in user has an active card
     const confirmationText = page.getByText('Dashboard');
+
+    // When the user does NOT have an active card
+    // const confirmationText = page.getByText('Activate Your Membership');
     await expect(confirmationText).toBeVisible();
 
   });
